@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 249, 250, 251;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color: 79, 70, 229;
+  --accent-color: 129, 140, 248;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
+  --primary-color: 129, 140, 248;
+  --accent-color: 99, 102, 241;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+.blog-content h2 {
+  @apply text-2xl font-bold mt-8 mb-4 pt-4 scroll-mt-20;
+}
+
+.blog-content p {
+  @apply mb-4 text-base leading-relaxed;
+}
+
+.blog-content strong {
+  @apply font-semibold;
+}
+
+.blog-content ul, .blog-content ol {
+  @apply my-4 ml-6 list-disc;
+}
+
+.blog-content li {
+  @apply mb-2;
+}
+
+.container {
+  @apply px-4 mx-auto max-w-6xl;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
+}
+
+.badge {
+  @apply inline-block bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300;
+}
+
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white;
+}
+
+.jump-link {
+  @apply flex items-center py-1 px-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors;
+}
+
+.jump-link-active {
+  @apply bg-indigo-50 text-indigo-600 dark:bg-gray-700 dark:text-indigo-400;
+}
+
+/* Animation for page transitions */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-transition {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  .blog-content h2 {
+    @apply text-xl;
+  }
+}

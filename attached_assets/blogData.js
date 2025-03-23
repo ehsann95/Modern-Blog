@@ -284,3 +284,10 @@ export const getPostsByTag = (tag) => {
     post.tags.some(t => t.toLowerCase() === tag.toLowerCase())
   );
 };
+
+// Get recent posts sorted by date
+export const getRecentPosts = () => {
+  return [...blogPosts]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 6);
+};
