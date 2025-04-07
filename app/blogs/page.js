@@ -5,9 +5,9 @@ import Pagination from "@/components/Pagination";
 import TagCloud from "@/components/TagCloud";
 
 export const metadata = {
-  title: "All Articles",
+  title: "All Blogs",
   description:
-    "Browse our complete collection of articles on design principles, user experience, and creative insights.",
+    "Browse our complete collection of blogs on design principles, user experience, and creative insights.",
 };
 
 export default async function BlogsPage({ searchParams }) {
@@ -25,11 +25,11 @@ export default async function BlogsPage({ searchParams }) {
       <Breadcrumbs />
 
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
-        All Articles
+        All Blogs
       </h1>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
-        Browse our collection of {allPosts.length} articles on design
-        principles, user experience, and creative insights.
+        Browse our collection of {allPosts.length} blogs on design principles,
+        user experience, and creative insights.
       </p>
 
       {/* Tags filter */}
