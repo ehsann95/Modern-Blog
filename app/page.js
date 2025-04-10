@@ -89,7 +89,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      {/* <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-16">
         <div className="bg-indigo-600 dark:bg-indigo-800 rounded-xl p-8 md:p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Dive Deeper into Design Knowledge
@@ -105,7 +105,7 @@ export default function Home() {
             Explore All Blogs
           </Link>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
