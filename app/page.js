@@ -6,11 +6,11 @@ import BlogCard from "@/components/BlogCard";
 import SearchBar from "@/components/SearchBar";
 import TagCloud from "@/components/TagCloud";
 
-export const metadata = {
-  title: "Home",
-  description:
-    "Explore our modern blog with insights on design principles, user experience, and creative techniques.",
-};
+// export const metadata = {
+//   title: "Home",
+//   description:
+//     "Explore our modern blog with insights on design principles, user experience, and creative techniques.",
+// };
 
 export default function Home() {
   const featuredPosts = getFeaturedPosts();
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="page-transition">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-500 to-purple-600 dark:from-indigo-700 dark:to-purple-800 py-20">
+      <section className="bg-gradient-to-r from-blog-primary to-blog-accent dark:from-indigo-700 dark:to-purple-800 py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Insights for Modern Designers

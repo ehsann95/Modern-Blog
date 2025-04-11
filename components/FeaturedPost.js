@@ -64,7 +64,7 @@ export default function FeaturedPost({ post }) {
 
           <Link
             href={`/blogs/${post.slug}`}
-            className="btn-primary hover:bg-indigo-700 transition-colors btn"
+            className="btn-primary  transition-colors btn"
           >
             Read Blog
           </Link>

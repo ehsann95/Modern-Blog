@@ -41,7 +41,8 @@ body {
   @apply font-semibold;
 }
 
-.blog-content ul, .blog-content ol {
+.blog-content ul,
+.blog-content ol {
   @apply my-4 ml-6 list-disc;
 }
 
@@ -58,7 +59,7 @@ body {
 }
 
 .btn-primary {
-  @apply bg-indigo-600 text-white hover:bg-indigo-700;
+  @apply bg-blog-primary text-white hover:bg-blog-accent;
 }
 
 .btn-secondary {
@@ -87,8 +88,12 @@ body {
 
 /* Animation for page transitions */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .page-transition {
